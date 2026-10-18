@@ -50,3 +50,30 @@ Nature Planner is a simple, nature-inspired to-do list application built to help
 ## Author
 
 Student project — Week 4 To-Do List App.
+
+## Project Structure
+
+```text
+week4-todo-app/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── main.js
+│   └── style.css
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## Links
+
+- **GitHub Repository:** https://github.com/Keniaumwali/week4-todo-app
+- **Live Application:** Coming soon
+- **Demo Video:** Coming soon
+
+## Future Improvements
+
+- Improve accessibility and keyboard navigation.
+- Add more task organization options.
+- Continue improving the user experience.
