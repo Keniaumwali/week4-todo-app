@@ -1,79 +1,102 @@
-
 # Nature Planner — To-Do List App
 
 ## Project Overview
 
-Nature Planner is a simple, nature-inspired to-do list application built to help users organize their daily tasks.
+Nature Planner is a nature-inspired to-do list application built with HTML, Tailwind CSS v4, and vanilla JavaScript. It helps users organize daily tasks, track progress, and save their tasks in the browser.
 
 ## Features
 
+### Required Features
 - Add tasks with input validation.
-- Mark tasks as completed.
-- Edit existing tasks.
+- Mark tasks as completed or active.
+- Edit tasks in place.
 - Delete tasks with confirmation.
 - Filter tasks by All, Active, and Completed.
-- Display the number of remaining tasks.
+- Display the remaining task count.
 - Clear completed tasks.
 - Save tasks using localStorage.
 - Display an empty state when no tasks are available.
+
+### Extra Features
 - Assign Low, Medium, or High priority.
-- Set a due date for each task.
+- Set an optional due date for each task.
 - Search tasks by name.
 
 ## Technologies Used
 
 - HTML5
 - Tailwind CSS v4
-- JavaScript
+- Vanilla JavaScript
 - Vite
 - Browser localStorage
+
+## User Stories
+
+- As a user, I want to add tasks so I can organize my daily activities.
+- As a user, I want to complete and edit tasks so I can manage my progress.
+- As a user, I want to delete tasks I no longer need.
+- As a user, I want to filter and search tasks to find them easily.
+- As a user, I want my tasks to remain saved after refreshing the page.
+- As a user, I want to set priorities and due dates to organize important tasks.
+
+## Application State
+
+Each task is represented by an object containing information such as its identifier, task text, completion status, priority, and due date.
+
+Example state shape:
+
+```js
+const tasks = [
+  {
+    id: 1,
+    text: "Water the plants",
+    completed: false,
+    priority: "High",
+    dueDate: "2026-10-20"
+  }
+];
+```
+
+This is an example of the data structure, not necessarily the exact variable used in the application.
 
 ## How to Run the Project
 
 1. Install Node.js.
 2. Open the project folder in VS Code.
 3. Open the terminal.
-4. Run `npm.cmd install`.
-5. Run `npm.cmd run dev`.
-6. Open the local URL shown in the terminal.
+4. Install dependencies:
+
+   ```bash
+   npm.cmd install
+   ```
+
+5. Start the development server:
+
+   ```bash
+   npm.cmd run dev
+   ```
+
+6. Open the local URL displayed in the terminal.
 
 ## How to Use
 
 1. Enter a task description.
-2. Choose its priority and optional due date.
-3. Click Add task.
-4. Use the checkbox to complete a task.
-5. Use Edit or Delete to manage tasks.
+2. Select a priority and, if needed, a due date.
+3. Add the task.
+4. Mark tasks as completed using the checkbox.
+5. Edit or delete tasks as needed.
 6. Use the filters and search field to find tasks.
-7. Refresh the page to check that tasks are saved.
+7. Clear completed tasks when appropriate.
+8. Refresh the page to verify that tasks persist.
 
-## Author
+## Screenshots
 
-Student project — Week 4 To-Do List App.
+Add screenshots of the application at mobile and desktop sizes here.
 
-## Project Structure
+Suggested files:
+- `screenshots/mobile-view.png`
+- `screenshots/desktop-view.png`
 
-```text
-week4-todo-app/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── main.js
-│   └── style.css
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
-```
+## Challenges and What I Learned
 
-## Links
-
-- **GitHub Repository:** https://github.com/Keniaumwali/week4-todo-app
-- **Live Application:** Coming soon
-- **Demo Video:** Coming soon
-
-## Future Improvements
-
-- Improve accessibility and keyboard navigation.
-- Add more task organization options.
-- Continue improving the user experience.
+During this project, I practiced building an interactive web application using HTML, Tailwind CSS,
