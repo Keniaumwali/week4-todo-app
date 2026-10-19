@@ -7,3 +7,9 @@
   --color-leaf: #DDE6D5;
   --color-earth: #3D4938;
 }
+
+/* Makes keyboard focus visible for better accessibility. */
+:focus-visible {
+  outline: 3px solid var(--color-sage-dark);
+  outline-offset: 3px;
+}
