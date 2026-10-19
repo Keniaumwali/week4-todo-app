@@ -262,13 +262,16 @@ function renderTasks() {
     emptyMessage.textContent = 'Your garden is ready to grow!'
   }
 
-  filterButtons.forEach((button) => {
-    const selected = button.dataset.filter === currentFilter
+ // Updates filter styling and announces the selected filter to assistive technology.
+filterButtons.forEach((button) => {
+  const selected = button.dataset.filter === currentFilter
 
-    button.className = selected
-      ? 'rounded-full bg-sage px-4 py-2 text-sm font-semibold text-white'
-      : 'rounded-full border border-leaf px-4 py-2 text-sm hover:bg-leaf'
-  })
+  button.setAttribute('aria-pressed', String(selected))
+
+  button.className = selected
+    ? 'rounded-full bg-sage px-4 py-2 text-sm font-semibold text-white'
+    : 'rounded-full border border-leaf px-4 py-2 text-sm hover:bg-leaf'
+})
 }
 
 taskForm.addEventListener('submit', (event) => {
