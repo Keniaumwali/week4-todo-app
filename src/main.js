@@ -106,7 +106,7 @@ try {
 
 let currentFilter = 'all'
 let searchText = ''
-
+// Saves the current tasks to browser localStorage.
 function saveTasks() {
   try {
     localStorage.setItem('naturePlannerTasks', JSON.stringify(tasks))
@@ -114,7 +114,7 @@ function saveTasks() {
     formMessage.textContent = 'Could not save tasks in this browser.'
   }
 }
-
+// Creates a reusable button with the given label and CSS classes.
 function makeButton(label, extraClasses = '') {
   const button = document.createElement('button')
   button.type = 'button'
@@ -124,6 +124,7 @@ function makeButton(label, extraClasses = '') {
   return button
 }
 
+// Updates the task list, counter, empty state, and active filter.
 function renderTasks() {
   taskList.innerHTML = ''
 
@@ -221,7 +222,7 @@ function renderTasks() {
         if (event.key === 'Escape') cancelButton.click()
       })
     })
-
+// Removes completed tasks after user confirmation.
     const deleteButton = makeButton(
       'Delete',
       'border-red-200 text-red-700 hover:bg-red-50'
@@ -242,7 +243,7 @@ function renderTasks() {
     li.append(checkbox, details, editButton, deleteButton)
     taskList.appendChild(li)
   })
-
+// Handles clicks on the task filter buttons.
   const remaining = tasks.filter((task) => !task.completed).length
   taskCount.textContent =
     `${remaining} task${remaining === 1 ? '' : 's'} remaining`
