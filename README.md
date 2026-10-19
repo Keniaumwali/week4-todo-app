@@ -100,3 +100,6 @@ Suggested files:
 ## Challenges and What I Learned
 
 During this project, I practiced building an interactive web application using HTML, Tailwind CSS,
+
+## Here is a link for my video:
+https://drive.google.com/file/d/1XtRBcZH7J7Zuo4-HvoW-h5m5D60kLm2_/view?usp=drive_link
