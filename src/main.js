@@ -44,7 +44,9 @@ document.querySelector('#app').innerHTML = `
 
         <div class="mt-7 flex flex-wrap items-center justify-between gap-3">
           <h2 class="text-xl font-bold">My tasks</h2>
-          <p class="text-sm text-earth/70"><span id="task-count">0 tasks remaining</span></p>
+         <p class="text-sm text-earth/70">
+  <span id="task-count" aria-live="polite" aria-atomic="true">0 tasks remaining</span>
+</p>
         </div>
 
         <div class="mt-4 flex flex-wrap gap-2" aria-label="Filter tasks">
